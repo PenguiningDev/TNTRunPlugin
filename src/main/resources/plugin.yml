@@ -1,0 +1,12 @@
+name: TNTRunPlugin
+version: '${project.version}'
+main: me.penguining.tntrunplugin.TNTRunPlugin
+api-version: 1.19
+description: TNTRunPlugin
+commands:
+  start:
+    description: Starts a game of TNT Run
+  end:
+    description: Ends a game of TNT Run
+  gamestate:
+    description: Gives the game state
