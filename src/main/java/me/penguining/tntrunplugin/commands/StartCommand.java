@@ -20,19 +20,22 @@ public class StartCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        /*
         if (command.getName().equalsIgnoreCase("start")) {
             if (Bukkit.getOnlinePlayers().size() == 1) {
                 Player player = (Player) sender;
                 player.sendMessage(ChatColor.RED + "You cannot start the game with only 1 player online!");
             }
+
+         */
             Player player = (Player) sender;
-                if (Bukkit.getOnlinePlayers().size() > 1) {
+                if (Bukkit.getOnlinePlayers().size() == 1) {
                     gameManager.setGameState(GameState.STARTING);
                     Bukkit.broadcastMessage("" + ChatColor.RED + player.getName() + ChatColor.WHITE + " has started the game!");
 
                     return true;
                 }
-            }
+
 
         return false;
     }

@@ -18,11 +18,13 @@ public class FullHealthListener implements Listener {
 
     @EventHandler
     public void onPlayerLoseHealth(EntityDamageEvent event) {
-        Player player = (Player) event.getEntity();
+        Player player = null;
+        //Check to see whether the entity is a player first before initializing player
+        if(event.getEntity() instanceof Player)  player = (Player) event.getEntity();
 
 //        if (gameManager.getGameState() == GameState.ACTIVE || gameManager.getGameState() == GameState.STARTING) {
 
-                event.setCancelled(true);
+        event.setCancelled(true);
 //                player.setHealth(player.getMaxHealth());
             }
 
